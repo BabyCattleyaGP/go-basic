@@ -14,3 +14,4 @@ This repository for personal learning material. Learning basic programming with 
 
 ## Test
 * Run `go test`
+* Benchmark: on powershell (windows) `go test -bench="."`
