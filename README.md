@@ -4,10 +4,13 @@ This repository for personal learning material. Learning basic programming with 
 
 ## Dev Environment
 
-* Go version go1.14.2 windows/amd64
+* Go version go1.14.3 windows/amd64
 
 ## Run
 
 * Build `go build filename.go`
-* Run without build `go run filename.go`
+* Or Run without build `go run filename.go`
 * Run `.\filename.go`
+
+## Test
+* Run `go test`
