@@ -5,9 +5,14 @@ import (
 	t "time"
 )
 
-// Hello function
+const prefix = "Hello, "
+
+//Hello function
 func Hello(name string) string {
-	return "Hello, " + name
+	if name == "" {
+		name = "World"
+	}
+	return prefix + name
 }
 
 func main() {
