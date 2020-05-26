@@ -5,8 +5,9 @@ import (
 	t "time"
 )
 
-const prefix = "Hello, "
+const englishPrefix = "Hello, "
 const frenchPrefix = "Bonjour, "
+const spanishPrefix = "Hola, "
 
 //Hello function
 func Hello(name string, language string) string {
@@ -14,13 +15,22 @@ func Hello(name string, language string) string {
 		name = "World"
 	}
 
-	if language == "French" {
-		return frenchPrefix + name
+	return greetingPrefix(language) + name
+}
+
+func greetingPrefix(language string) (prefix string) {
+	switch language {
+	case "french":
+		prefix = frenchPrefix
+	case "spanish":
+		prefix = spanishPrefix
+	default:
+		prefix = englishPrefix
 	}
-	return prefix + name
+	return
 }
 
 func main() {
-	fmt.Println(Hello("Baby", "French"))
+	fmt.Println(Hello("Baby", "french"))
 	fmt.Println(t.Now())
 }
