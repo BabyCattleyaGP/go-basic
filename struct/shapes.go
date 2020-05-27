@@ -1,11 +1,17 @@
 package main
 
-//Perimeter function
-func Perimeter(width float64, height float64) float64 {
-	return 2 * (width + height)
+// Rectangle has the dimensions of a rectangle
+type Rectangle struct {
+	Width  float64
+	Height float64
 }
 
-//Area function
-func Area(width float64, height float64) float64 {
-	return width * height
+// Perimeter returns the perimeter of a rectangle
+func Perimeter(rectangle Rectangle) float64 {
+	return 2 * (rectangle.Width + rectangle.Height)
+}
+
+// Area returns the area of the rectangle
+func Area(rectangle Rectangle) float64 {
+	return rectangle.Width * rectangle.Height
 }
