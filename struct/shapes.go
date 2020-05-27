@@ -28,6 +28,17 @@ func (c Circle) Area() float64 {
 	return math.Pi * c.Radius * c.Radius
 }
 
+// Triangle has the dimensions of a Triangle
+type Triangle struct {
+	Base   float64
+	Height float64
+}
+
+// Area returns the area of the Triangle
+func (t Triangle) Area() float64 {
+	return (t.Base * t.Height) * 0.5
+}
+
 // Perimeter returns the perimeter of a rectangle
 func Perimeter(rectangle Rectangle) float64 {
 	return 2 * (rectangle.Width + rectangle.Height)
