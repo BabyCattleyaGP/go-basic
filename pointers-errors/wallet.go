@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 // Stringer is implemented by any value that has a String method
 type Stringer interface {
@@ -31,7 +34,15 @@ func (w *Wallet) Balance() Bitcoin {
 	return w.balance
 }
 
+// ErrInsufficientFunds variable for error message
+var ErrInsufficientFunds = errors.New("cannot withdraw, insufficient funds")
+
 // Withdraw function to know amount of user withdraw
-func (w *Wallet) Withdraw(amount Bitcoin) {
+func (w *Wallet) Withdraw(amount Bitcoin) error {
+	if amount > w.balance {
+		return ErrInsufficientFunds
+	}
+
 	w.balance -= amount
+	return nil
 }
