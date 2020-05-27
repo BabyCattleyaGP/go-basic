@@ -14,6 +14,6 @@ This repository for personal learning material. Learning basic programming with 
 
 ## Test
 
-* Run `go test`
+* Run `go test` or `go test -v`
 * Benchmark: on powershell (windows) `go test -bench="."`
 * Test coverage: `go test -cover`
