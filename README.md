@@ -18,4 +18,4 @@ This repository for personal learning material. Learning basic programming with 
 * Benchmark: on powershell (windows) `go test -bench="."`
 * Test coverage: `go test -cover`
 * Run spesific column (Table Driven Test), example: `go test -run FunctionName/Name`
-* Run `errcheck .` for check error handling scenario we have not tested.
+* DO `errcheck .` for check error handling scenario we have not tested.
